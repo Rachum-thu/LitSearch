@@ -1,4 +1,3 @@
-import os
 import json
 from typing import List, Any, Tuple
 from datasets import Dataset
@@ -207,6 +206,5 @@ def prompt_gpt4_model(model: OPENAIBaseEngine, prompt: str = None, messages: Lis
     return response["content"]
 
 ##### cache directory #####
-
 def get_cache_dir() -> str:
-    return os.environ['HF_HOME']
+    return '.cache'
